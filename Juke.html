@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JukeBox 2017</title>
+    <link href="jukebox.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="title">
+            <h1>Jukebox 2017</h1>
+        </div>
+
+        <div id="jukebox-img">
+            <img class="cover">
+        </div>
+
+        <div id="jukebox-player">
+
+            <div id="jukebox-info">
+                <span class="artist"></span> - <span class="title"></span>
+            </div>
+
+            <input id="volume" type="range" min="0" max="10" value="5">
+            <br>
+
+            <div id="jukebox-buttons">
+                <button id="play"></button>
+                <button id="pause"></button>
+                <button id="ff"></button>
+                <button id="rewind"></button>
+                <button id="stop"></button>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div id="tracker">
+                <div id="progressbar">
+                    <span id="progress"></span>
+                </div>
+                <span id="duration"></span>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <ul id="playlist">
+                <li song="St Germain - ExampleSong.mp3" cover="ExamplePic.jpg" artist="St Germain">ExampleSong1.mp3</li>
+                <li song="St Germain - ExampleSong.mp3" cover="ExamplePic.jpg" artist="St Germain">ExampleSong2.mp3</li>
+                <li song="St Germain - ExampleSong.mp3" cover="ExamplePic.jpg" artist="St Germain">ExampleSong3.mp3</li>
+                <li song="St Germain - ExampleSong.mp3" cover="ExamplePic.jpg" artist="St Germain">ExampleSong4.mp3</li>
+                <li song="St Germain - ExampleSong.mp3" cover="ExamplePic.jpg" artist="St Germain">ExampleSong5.mp3</li>
+            </ul>
+
+        </div>
+        <!-- ///////////// player div -->
+    </div>
+    <!-- //////Container div -->
+
+    <!-- /////////////////////////////////////////////////// -->
+
+    <!-- <div id="title">
+      <h1>Jukebox 2017</h1>
+    </div>
+
+    <audio id="player">
+      <source src="mp3/DpMfP6qUSBo.mp3">
+    </audio>
+
+    <div id="buttons">
+        <button id="play">Play</button>
+        <button id="pause">Pause</button>
+        <button id="rewind">Rewind</button>
+        <button id="fastforward">FF</button>
+        <button id="stop">Stop</button>
+    </div> -->
+
+    <!-- ///////////////////////////////////////////////////// -->
+
+
+    <!-- <div class="container gradient">
+      <div class="player gradient">
+
+        <a class="button gradient" id="play" href="" title=""></a>
+        <a class="button gradient" id="mute" href="" title=""></a>
+
+        <input type="range" id="seek" value="0" max="" />
+
+        <a class="button gradient" id="close" href="" title=""></a>
+
+      </div>
+    </div> -->
+
+    <!-- ////////////////////////////////////////////////// -->
+
+    <!-- <audio src="" controls>
+
+        <p onclick ="soundclick(play)">
+          <button>Play</button>
+        </p>
+        <p onclick ="soundclick(stop)">
+          <button>Pause</button>
+        </p>
+        <p onclick ="soundclick(stop)">
+          <button>Stop</button>
+        </p>
+        <p onclick ="soundclick(stop)">
+          <button>Fast Forward</button>
+        </p>
+        <p onclick ="soundclick(stop)">
+          <button>Rewind</button>
+        </p>
+
+    </audio> -->
+
+    <!-- //////////////////////////////////////////////////-->
+
+
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+    <script src="Jukebox2017.js"></script>
+</body>
+<footer>
+    <div class="footer">
+        <h6>Copyright - Just filling space, One day. 2017</h6>
+    </div>
+</footer>
+
+</html>
