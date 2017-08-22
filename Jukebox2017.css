@@ -49,15 +49,6 @@ body {
   border: 5px dotted black;
 }
 
-input#volume{
-	width:95%;
-	margin-left:2%;
-	background: darkgrey;
-	height:7px;
-	margin-bottom:20px;
-	border: 3px solid black;
-}
-
 #jukeboxButtons {
 	width: 90%;
 	display: block;
@@ -68,12 +59,21 @@ input#volume{
   border: 3px solid black;
 }
 
-.clearfix {
-	clear: both;
+input#volume{
+	width:95%;
+	margin-left:2%;
+	background: darkgrey;
+	height:7px;
+	margin-bottom:20px;
+	border: 3px solid black;
 }
 
+/*.clearfix {
+	clear: both;
+}*/
+
 #playlist {
-	list-style: none;
+	list-style-type: none;
 	margin: 13%;
   padding: 25px;
   border: 7px solid black;
@@ -89,4 +89,4 @@ input#volume{
 		width: auto;
 		float: none;
 	}
-}
+};

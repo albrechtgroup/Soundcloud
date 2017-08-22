@@ -6,9 +6,7 @@
     <title>JukeBox 2017</title>
     <link href="jukebox2017.css" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
-
-    <!-- <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script> -->
-
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
 </head>
 
 <body>
@@ -28,22 +26,19 @@
         <div id="jukeboxPlayer">
 
             <div id="jukeboxInfo">
-                <span class="artist"></span> - <span class="title"></span>
+                <span class="artist"></span> => <span class="title"></span>
             </div>
-
-            <input id="volume" type="range" min="0" max="10" value="5">
-            <br>
 
             <div id="jukeboxButtons">
                 <button id="play">Play</button>
                 <button id="pause">Pause</button>
-                <button id="stop">Stop</button>
                 <button id="prev">Prev</button>
                 <button id="next">Next</button>
             </div>
 
-            <div class="clearfix"></div>
-
+            <input id="volume" type="range" min="0" max="10" value="5">
+            <br>
+            <!-- <div class="clearfix"></div> -->
             <div id="tracker">
                 <div id="progressbar">
                     <span id="progress"></span>
@@ -51,86 +46,21 @@
                 <span id="duration"></span>
             </div>
 
-            <div class="clearfix"></div>
-
             <ul id="playlist">
                 <li song="Sure Thing - song1.mp3" cover="ExamplePic1.jpg" artist="St. Germain">Sure thing</li>
                 <li song="The Music Scene - song2.mp3" cover="ExamplePic2.jpg" artist="Blockhead">The Music Scene</li>
                 <li song="Sittin Here - song.mp3" cover="ExamplePic3.jpg" artist="St. Germain">Sittin Here</li>
-                <!-- <li song="artist - ExampleSong.mp3" cover="ExamplePic.jpg" artist="St Germain">ExampleSong4.mp3</li>
-                <li song="artist - ExampleSong.mp3" cover="ExamplePic.jpg" artist="St Germain">ExampleSong5.mp3</li> -->
             </ul>
 
         </div>
         <!-- ///////////// player div -->
     </div>
     <!-- //////Container div -->
-
-    <!-- /////////////////////////////////////////////////// -->
-
-    <!-- <div id="title">
-      <h1>Jukebox 2017</h1>
-    </div>
-
-    <audio id="player">
-      <source src="mp3/DpMfP6qUSBo.mp3">
-    </audio>
-
-    <div id="buttons">
-        <button id="play">Play</button>
-        <button id="pause">Pause</button>
-        <button id="rewind">Rewind</button>
-        <button id="fastforward">FF</button>
-        <button id="stop">Stop</button>
-    </div> -->
-
-    <!-- ///////////////////////////////////////////////////// -->
-
-
-    <!-- <div class="container gradient">
-      <div class="player gradient">
-
-        <a class="button gradient" id="play" href="" title=""></a>
-        <a class="button gradient" id="mute" href="" title=""></a>
-
-        <input type="range" id="seek" value="0" max="" />
-
-        <a class="button gradient" id="close" href="" title=""></a>
-
-      </div>
-    </div> -->
-
-    <!-- ////////////////////////////////////////////////// -->
-
-    <!-- <audio src="" controls>
-
-        <p onclick ="soundclick(play)">
-          <button>Play</button>
-        </p>
-        <p onclick ="soundclick(stop)">
-          <button>Pause</button>
-        </p>
-        <p onclick ="soundclick(stop)">
-          <button>Stop</button>
-        </p>
-        <p onclick ="soundclick(stop)">
-          <button>Fast Forward</button>
-        </p>
-        <p onclick ="soundclick(stop)">
-          <button>Rewind</button>
-        </p>
-
-    </audio> -->
-
-    <!-- //////////////////////////////////////////////////-->
-
-
-    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
     <script src="Jukebox2017.js"></script>
-</body>
+    </body>
 <footer>
     <div class="footer">
-        <h5>Copyright - Just filling space, One day.. 2017</h5>
+        <h5>Copyright Filler, One day. 2017</h5>
     </div>
 </footer>
 
