@@ -3,9 +3,7 @@ var pauseButton = document.getElementById('pause');
 var previousButton = document.getElementById('prev');
 var nextButton = document.getElementById('next');
 
-SC.initialize({
-    client_id: 'fd4e76fc67798bfa742089ed619084a6'
-  });
+SC.initialize({client_id: 'fd4e76fc67798bfa742089ed619084a6'});
 
 function Jukebox(audio) {
     this.songStorage = [];
@@ -17,47 +15,55 @@ function Jukebox(audio) {
     this.currentSongIndex = 0;
 
     this.play = function() {
-        SC.get('/tracks/' +  this.songStorage[this.currentSongIndex]).then(function(tracks) {
-         });
-         this.song = SC.stream('/tracks/' + this.songStorage[this.currentSongIndex]);
-         this.song.then(function(player) {
+        console.log(this.songStorage[this.currentSongIndex]);
+        console.log(this.currentSongIndex);
+        SC.get('/tracks/' + this.songStorage[this.currentSongIndex]).then(function(tracks) {});
+        this.song = SC.stream('/tracks/' + this.songStorage[this.currentSongIndex]);
+        this.song.then(function(player) {
             this.player = player;
-             player.play();
-           })}
+            player.play();
+
+        })
+    }
 
     this.pause = function() {
-      this.song.then(function(player) {
-         this.player = player;
-          player.pause();
-        })}
-
+        this.song.then(function(player) {
+            this.player = player;
+            player.pause();
+        })
+    }
 
     this.previous = function() {
-        alert("hello previous");
+      
     }
 
     this.next = function() {
-        alert("hello next");
+        if (this.currentSongIndex > this.songStorage.length) {
+            this.currentSongIndex = 0;
+            player.pause();
+            player.play();
+        } else {
+            console.log(this.songStorage.length);
+            this.currentSongIndex++;
+            console.log(this.songStorage.length);
+            player.pause()
+            player.play();
+        }
+        console.log(this.songStorage.length);
+        this.play();
     }
 }
 
 //////////////////////   END OF JUKEBOX  /////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
 
-
-
-
 var audio = document.getElementById('jukeAudio'); //====================Instances Add tracks to storage======
 var jukebox = new Jukebox();
 
 jukebox.addTrack(200954643);
-jukebox.addTrack('hello');
-
-
-
+jukebox.addTrack(200954642);
 
 // Event Listeners
-
 
 playButton.addEventListener('click', (event) => {
     event.preventDefault();
