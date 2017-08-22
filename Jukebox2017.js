@@ -34,7 +34,19 @@ function Jukebox(audio) {
     }
 
     this.previous = function() {
-      
+      if (this.currentSongIndex > 0) {
+          this.currentSongIndex = 0;
+          player.pause();
+          player.play();
+      } else {
+          console.log(this.currentSongIndex);
+          this.currentSongIndex--;
+          console.log(this.currentSongIndex);
+          player.pause()
+          player.play();
+      }
+      console.log(this.songStorage.length);
+      this.play();
     }
 
     this.next = function() {
