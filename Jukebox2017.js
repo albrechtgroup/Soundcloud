@@ -18,6 +18,7 @@ function Jukebox(audio) {
 
     this.play = function() {
         SC.get('/tracks/' +  this.songStorage[this.currentSongIndex]).then(function(tracks) {
+         });
          this.song = SC.stream('/tracks/' + this.songStorage[this.currentSongIndex]);
          this.song.then(function(player) {
             this.player = player;
@@ -25,8 +26,11 @@ function Jukebox(audio) {
            })}
 
     this.pause = function() {
-        alert("hello pause");
-    }
+      this.song.then(function(player) {
+         this.player = player;
+          player.pause();
+        })}
+
 
     this.previous = function() {
         alert("hello previous");
