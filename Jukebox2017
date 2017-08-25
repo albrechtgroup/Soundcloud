@@ -26,7 +26,6 @@
         <div id="jukeboxPlayer">
 
             <div id="jukeboxInfo">
-                <span class="artist"></span> => <span class="title"></span>
             </div>
 
             <div id="jukeboxButtons">
@@ -47,9 +46,9 @@
             </div>
 
             <ul id="playlist">
-                <li song="Sure Thing - song1.mp3" cover="ExamplePic1.jpg" artist="St. Germain">Sure thing</li>
+                <!-- <li song="Sure Thing - song1.mp3" cover="ExamplePic1.jpg" artist="St. Germain">Sure thing</li>
                 <li song="The Music Scene - song2.mp3" cover="ExamplePic2.jpg" artist="Blockhead">The Music Scene</li>
-                <li song="Sittin Here - song.mp3" cover="ExamplePic3.jpg" artist="St. Germain">Sittin Here</li>
+                <li song="Sittin Here - song.mp3" cover="ExamplePic3.jpg" artist="St. Germain">Sittin Here</li> -->
             </ul>
 
         </div>

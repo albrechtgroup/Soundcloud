@@ -32,7 +32,7 @@ body {
 	vertical-align: middle;
 	margin: 20px;
   padding: 33px;
-	border: 3px dashed black;
+	border: 3px;
 }
 
 #jukeboxPlayer {

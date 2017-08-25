@@ -2,7 +2,8 @@ var playButton = document.getElementById('play');
 var pauseButton = document.getElementById('pause');
 var previousButton = document.getElementById('prev');
 var nextButton = document.getElementById('next');
-
+var imageElement = document.getElementById('artistImg');
+var ElementThatWillTitle = document.getElementById('');
 SC.initialize({client_id: 'fd4e76fc67798bfa742089ed619084a6'});
 
 function Jukebox(audio) {
@@ -17,7 +18,10 @@ function Jukebox(audio) {
     this.play = function() {
         console.log(this.songStorage[this.currentSongIndex]);
         console.log(this.currentSongIndex);
-        SC.get('/tracks/' + this.songStorage[this.currentSongIndex]).then(function(tracks) {});
+        SC.get('/tracks/' + this.songStorage[this.currentSongIndex]).then(function(tracks) {
+          imageElement.innerHTML = '<img src="' + tracks.artwork_url + '"/>';
+          ElementThatWillTitle.innerHTML = tracks.title;});
+
         this.song = SC.stream('/tracks/' + this.songStorage[this.currentSongIndex]);
         this.song.then(function(player) {
             this.player = player;
@@ -34,19 +38,19 @@ function Jukebox(audio) {
     }
 
     this.previous = function() {
-      if (this.currentSongIndex > 0) {
-          this.currentSongIndex = 0;
-          player.pause();
-          player.play();
-      } else {
-          console.log(this.currentSongIndex);
-          this.currentSongIndex--;
-          console.log(this.currentSongIndex);
-          player.pause()
-          player.play();
-      }
-      console.log(this.songStorage.length);
-      this.play();
+        if (this.currentSongIndex > 0) {
+            this.currentSongIndex = 0;
+            player.pause();
+            player.play();
+        } else {
+            console.log(this.currentSongIndex);
+            this.currentSongIndex--;
+            console.log(this.currentSongIndex);
+            player.pause()
+            player.play();
+        }
+        console.log(this.songStorage.length);
+        this.play();
     }
 
     this.next = function() {
@@ -64,7 +68,7 @@ function Jukebox(audio) {
         console.log(this.songStorage.length);
         this.play();
     }
-}
+};
 
 //////////////////////   END OF JUKEBOX  /////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
