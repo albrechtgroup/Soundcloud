@@ -46,6 +46,7 @@
             </div>
 
             <ul id="playlist">
+                <li id="playListDisplay"></li>
                 <!-- <li song="Sure Thing - song1.mp3" cover="ExamplePic1.jpg" artist="St. Germain">Sure thing</li>
                 <li song="The Music Scene - song2.mp3" cover="ExamplePic2.jpg" artist="Blockhead">The Music Scene</li>
                 <li song="Sittin Here - song.mp3" cover="ExamplePic3.jpg" artist="St. Germain">Sittin Here</li> -->
@@ -56,7 +57,7 @@
     </div>
     <!-- //////Container div -->
     <script src="Jukebox2017.js"></script>
-    </body>
+</body>
 <footer>
     <div class="footer">
         <h5>Copyright Filler, One day. 2017</h5>
