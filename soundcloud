@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SoundCloud 2017</title>
+    <link href="soundcloud.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <audio id="jukeAudio"></audio>
+
+        <div id="title">
+            <h1>SoundCloud 2017</h1>
+        </div>
+
+        <div id="artistImg">
+            <img class="cover">
+        </div>
+
+        <div id="jukeboxPlayer">
+
+            <div id="jukeboxInfo">
+            </div>
+
+            <div id="jukeboxButtons">
+                <button id="play">Play</button>
+                <button id="pause">Pause</button>
+                <button id="prev">Prev</button>
+                <button id="next">Next</button>
+            </div>
+
+            <input id="volume" type="range" min="0" max="10" value="5">
+
+            <div id="tracker">
+                <div id="progressbar">
+                    <span id="progress"></span>
+                </div>
+            </div>
+
+            <ul id="playlist">
+                <li id="playListDisplay"></li>
+                <!-- <li song="Sure Thing - song1.mp3" cover="ExamplePic1.jpg" artist="St. Germain">Sure thing</li>
+                <li song="The Music Scene - song2.mp3" cover="ExamplePic2.jpg" artist="Blockhead">The Music Scene</li>
+                <li song="Sittin Here - song.mp3" cover="ExamplePic3.jpg" artist="St. Germain">Sittin Here</li> -->
+            </ul>
+
+        </div>
+        <!-- ///////////// player div -->
+    </div>
+    <!-- //////Container div -->
+    <script src="soundcloud.js"></script>
+</body>
+<footer>
+    <div class="footer">
+        <h5>Copyright Filler, One day. 2017</h5>
+    </div>
+</footer>
+
+</html>
