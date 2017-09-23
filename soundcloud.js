@@ -3,26 +3,26 @@ var pauseButton = document.getElementById('pause');
 var previousButton = document.getElementById('prev');
 var nextButton = document.getElementById('next');
 var imageElement = document.getElementById('artistImg');
-var ElementThatWillTitle = document.getElementById('jukeboxInfo');
-var ElementThatWillBeArtist = document.getElementById('playListDisplay')
+var elementThatWillTitle = document.getElementById('jukeboxInfo');
+var elementThatWillBeArtist = document.getElementById('playListDisplay')
 
 SC.initialize({client_id: 'fd4e76fc67798bfa742089ed619084a6'});
 
 function Jukebox(audio) {
     this.songStorage = [];
 
+    this.currentSongIndex = 0;
+
     this.addTrack = function(song) {
         this.songStorage.push(song);
     }
 
-    this.currentSongIndex = 0;
-
     this.play = function() {
         SC.get('/tracks/' + this.songStorage[this.currentSongIndex]).then(function(tracks) {
-           console.log(tracks.permalink_url)
+          console.log(tracks.permalink_url)
           imageElement.innerHTML = '<img src="' + tracks.artwork_url + '"/>';
-          ElementThatWillTitle.innerHTML = tracks.title;
-          ElementThatWillBeArtist.innerHTML = tracks.permalink_url;
+          elementThatWillTitle.innerHTML = tracks.title;
+          elementThatWillBeArtist.innerHTML = tracks.permalink_url;
            });
 
         this.song = SC.stream('/tracks/' + this.songStorage[this.currentSongIndex]);
@@ -84,29 +84,21 @@ jukebox.addTrack(200955785);
 jukebox.addTrack(200954643);
 
 
-
-
-// Event Listeners
+/////////// Event Listeners
 
 playButton.addEventListener('click', (event) => {
     event.preventDefault();
     jukebox.play();
-    // audio.src="song1.mp3";
-    // audio.play();
 });
 
 document.getElementById('pause').onclick = function() {
     event.preventDefault();
     jukebox.pause();
-    // audio.src="song1.mp3";
-    // audio.pause();
 };
 
 document.getElementById('next').onclick = function() {
     event.preventDefault();
     jukebox.next();
-    // audio.src="song1.mp3";
-    // audio.stop();
 };
 
 previousButton.addEventListener('click', function(event) {
